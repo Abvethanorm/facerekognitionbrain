@@ -1,0 +1,11 @@
+.nav__container {
+  display: flex;
+  justify-content: end;
+  font-size: 2rem;
+  font-family: "Roboto", sans-serif;
+  cursor: pointer;
+}
+
+.nav__btn:hover {
+  text-decoration: underline 2px solid;
+}
