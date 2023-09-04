@@ -1,19 +1,21 @@
-import React, { useState } from "react";
 import "./App.css";
 import FaceRecon from "./components/facerecon/FaceRecon";
 import Logo from "./components/logo/Logo";
 import Nav from "./components/navigation/Nav";
 import Search from "./components/search/Search";
+import { createContext, useState } from "react";
+export const imgUrlContext = createContext();
 
 function App() {
-  const [imgUrl, setImgUrl] = useState(""); // Manage imgUrl state
-
+  const [imgUrl, setImgUrl] = useState("");
   return (
     <>
-      <Nav />
-      <Logo />
-      <Search setImgUrl={setImgUrl} /> {/* Pass setImgUrl as a prop */}
-      {imgUrl && <FaceRecon imgUrl={imgUrl} />} {/* Pass imgUrl as a prop */}
+      <imgUrlContext.Provider value={[imgUrl, setImgUrl]}>
+        <Nav />
+        <Logo />
+        <Search />
+        <FaceRecon />
+      </imgUrlContext.Provider>
     </>
   );
 }

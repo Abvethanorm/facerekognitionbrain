@@ -1,15 +1,23 @@
-import { useState } from "react";
-
 import "./search.css";
+import { useContext, useState } from "react";
+import { imgUrlContext } from "../../App";
 
-function Search({ setImgUrl }) {
-  const [searchImgUrl, setsearchImgUrl] = useState("");
+function Search() {
+  const [imgUrl, setImgUrl] = useContext(imgUrlContext);
+  const [inputValue, setInputValue] = useState("");
   const handleSearch = (e) => {
-    const inputValue = e.target.value;
-    setImgUrl(inputValue);
+    const searchInput = e.target.value;
+    setInputValue(searchInput);
   };
-
   const flockEm = () => {
+    const findFace = (response) => {
+      const clarifaiFace =
+        response.json.outputs[0].data.regions[0].region_info.bounding_box;
+      const image = document.getElementById("inputimage");
+      const width = Number(image.width);
+      const height = Number(image.height);
+      console.log(width, height);
+    };
     const PAT = "a7a9dd5f386e4fa3a93ee1694c9c2fb5";
     const USER_ID = "epj7ya83au2p";
     const APP_ID = "my-first-application-fboe3e";
@@ -17,7 +25,7 @@ function Search({ setImgUrl }) {
 
     const MODEL_VERSION_ID = "6dc7e46bc9124c5c8824be4822abe105";
 
-    const IMAGE_URL = "https://samples.clarifai.com/metro-north.jpg";
+    const IMAGE_URL = { imgUrl };
     const raw = JSON.stringify({
       user_app_id: {
         user_id: USER_ID,
@@ -52,12 +60,11 @@ function Search({ setImgUrl }) {
       { IMAGE_URL } + MODEL_ID + "/versions/" + MODEL_VERSION_ID + "/outputs",
       requestOptions
     )
-      .then((response) => response.text())
+      .then((response) => findFace(response))
 
       .then((result) => console.log(result))
 
       .catch((error) => console.log("error", error));
-
     setImgUrl(inputValue);
   };
 

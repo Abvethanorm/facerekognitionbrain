@@ -1,10 +1,12 @@
-import React from "react";
+import { useContext } from "react";
+import { imgUrlContext } from "../../App";
 import "./recon.css";
 
-const FaceRecon = ({ imgUrl }) => {
+const FaceRecon = () => {
+  const [imgUrl] = useContext(imgUrlContext);
   return (
     <div className="recon__container container">
-      <img src={imgUrl} alt="Face Recognition" />
+      <img id="inputimage" src={imgUrl} alt="Face Recognition" />
     </div>
   );
 };
