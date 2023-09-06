@@ -1,9 +1,13 @@
-body {
-  background: rgb(52, 89, 149);
-  background: linear-gradient(
-    90deg,
-    rgba(52, 89, 149, 1) 0%,
-    rgba(234, 196, 53, 1) 1%,
-    rgba(3, 206, 164, 1) 100%
-  );
+.background {
+  position: fixed;
+  z-index: -2;
+  object-fit: fill;
+  width: 100vw;
+  height: 100%;
+}
+
+.navigation {
+  position: fixed;
+
+  width: 100vw;
 }

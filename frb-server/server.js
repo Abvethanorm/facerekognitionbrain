@@ -67,3 +67,4 @@ app.get("/count", (req, res) => {
 app.listen(3000, () => {
   console.log("we lit");
 });
+// have to change count to images on the profile

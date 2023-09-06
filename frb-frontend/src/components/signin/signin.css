@@ -1,0 +1,63 @@
+.signin__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+.signin__card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1.5rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+  border-radius: 1000rem;
+  padding: 5rem;
+  padding-bottom: 2rem;
+  height: 50vh;
+  width: 50vw;
+}
+.signin__title {
+  font-size: 2.5rem;
+  font-weight: 500;
+}
+
+.signin__input {
+  height: 3rem;
+  border-radius: 1rem;
+}
+.signin__btn__container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 1rem;
+}
+.signin__btn {
+  background-color: inherit;
+  border: none;
+  border-radius: 1.5rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  padding: 15px 2rem;
+  letter-spacing: 2px;
+  font-size: 1.2rem;
+  font-weight: 100;
+  cursor: pointer;
+}
+input {
+  font-size: 1.5rem;
+}
+
+.forgot {
+  color: slateblue;
+  margin-top: 3rem;
+  font-size: 0.7rem;
+  text-align: center;
+}
+
+.forgot:hover {
+  color: aliceblue;
+}
+.signin__btn:hover {
+  background-color: aliceblue;
+}

@@ -1,0 +1,27 @@
+.profile__container {
+  display: flex;
+  justify-content: space-between;
+}
+.profile__left {
+  display: flex;
+  flex-direction: column;
+  margin-top: 4rem;
+  gap: 2.5rem;
+}
+
+.profile__img__container {
+  width: 300px;
+  object-fit: fill;
+}
+
+.profile__img {
+  width: 100%;
+}
+
+.profile__text__container {
+  width: 30ch;
+  letter-spacing: 1.5px;
+  border-top: solid 1px black;
+  border-bottom: solid 1px black;
+  padding: 3rem 0rem;
+}
