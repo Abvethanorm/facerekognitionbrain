@@ -1,15 +1,40 @@
 .recon__container {
   display: flex;
   justify-content: center;
-  margin-top: 5rem;
+  margin-top: 15rem;
   height: 600px;
   width: 600px;
   object-fit: fill;
   border-radius: 1rem;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
-  padding: 2rem;
+  padding: 2rem 2rem;
 }
 
 #inputimage {
-  width: 100%;
+  width: 90%;
+  border-radius: 1rem;
+}
+.recon__btn__container {
+  display: flex;
+  justify-content: center;
+  gap: 4rem;
+  margin-top: 3rem;
+}
+
+.recon__btn {
+  background-color: inherit;
+  border: none;
+  border-radius: 1.5rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  padding: 1rem;
+  letter-spacing: 2px;
+  font-size: 1.2rem;
+  font-weight: 200;
+  cursor: pointer;
+  width: 10rem;
+}
+
+.recon__btn:hover {
+  background-color: #55afe7;
+  color: aliceblue;
 }

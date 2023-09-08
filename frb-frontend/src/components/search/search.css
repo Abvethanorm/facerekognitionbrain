@@ -35,6 +35,45 @@
   width: 10rem;
   margin-top: 1.5rem;
 }
+.loading__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+}
+
+.loading__message__container {
+  display: flex;
+  flex-direction: row;
+}
+
+.loading__message {
+  font-size: 2.5rem;
+  margin-top: 2rem;
+  color: #55afe7;
+  margin-right: 0.5rem;
+  animation: blink 1s infinite alternate-reverse;
+}
+
+.loading__dots {
+  width: 10px;
+  height: 10px;
+  background-color: #55afe7;
+  border-radius: 50%;
+  animation: blink 1s infinite alternate;
+  margin-left: 8px;
+  margin-top: 4rem;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 
 .search__btn:hover {
   background-color: #55afe7;
