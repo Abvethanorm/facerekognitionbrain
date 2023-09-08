@@ -1,0 +1,48 @@
+.modal__container {
+  background-color: aliceblue;
+  border-radius: 1rem;
+  position: fixed;
+  z-index: 10;
+  display: flex;
+  justify-content: space-between;
+  width: 80vw;
+  height: 60vh;
+  margin-top: 3/2rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+}
+.modal__text__container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+  padding: 3rem;
+  text-transform: capitalize;
+
+  flex: 1;
+}
+
+.modal__closebtn {
+  font-size: 1.5rem;
+  color: #55afe7;
+  font-weight: 800;
+  padding: 1rem;
+  cursor: pointer;
+}
+
+.modal__input {
+  height: 4rem;
+  border-radius: 1.5rem;
+  color: #55afe7;
+  font-size: 2rem;
+}
+.modal__btn {
+  background-color: inherit;
+  border: none;
+  border-radius: 1.5rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  padding: 1rem;
+  letter-spacing: 2px;
+  font-size: 1.2rem;
+  font-weight: 200;
+  cursor: pointer;
+  margin-top: 0.5rem;
+}

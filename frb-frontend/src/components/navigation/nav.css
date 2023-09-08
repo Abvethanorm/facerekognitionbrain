@@ -1,13 +1,19 @@
 .nav__container {
   display: flex;
-  justify-content: end;
+  justify-content: space-between;
   font-size: 2rem;
   font-family: "Roboto", sans-serif;
   cursor: pointer;
-  position: absolute;
+
   width: 100%;
-  right: 0%;
+}
+.nav__btn {
+  margin-top: 3rem;
 }
 .nav__btn:hover {
   text-decoration: underline 2px solid;
+}
+
+.logo__container {
+  margin-bottom: 4rem;
 }

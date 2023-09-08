@@ -1,6 +1,17 @@
 import "./signin.css";
+import { useState } from "react";
+import Modal from "./Modal";
 
 const Signin = () => {
+  const [showModal, setShowModal] = useState(false);
+  const modalToggler = () => {
+    setShowModal(true);
+  };
+
+  const closeModal = () => {
+    setShowModal(false);
+  };
+
   return (
     <div className="signin__container container">
       <div className="signin__card">
@@ -22,12 +33,15 @@ const Signin = () => {
         />
         <div className="signin__btn__container">
           <button className="signin__btn">SignIn</button>
-          <button className="signin__btn">Register</button>
+          <button onClick={modalToggler} className="signin__btn">
+            Register
+          </button>
         </div>
         <a className="forgot" href="#">
           <p>forgot your password?</p>
         </a>
       </div>
+      {showModal && <Modal closeModal={closeModal} />}
     </div>
   );
 };

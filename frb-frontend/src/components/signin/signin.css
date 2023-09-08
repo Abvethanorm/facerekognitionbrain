@@ -46,6 +46,7 @@
 }
 input {
   font-size: 1.5rem;
+  color: #55afe7;
 }
 
 .forgot {
@@ -60,4 +61,11 @@ input {
 }
 .signin__btn:hover {
   background-color: aliceblue;
+}
+::placeholder {
+  color: #396d7c;
+  font-weight: 300;
+}
+::placeholder:hover {
+  color: aliceblue;
 }
